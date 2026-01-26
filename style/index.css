@@ -57,9 +57,21 @@ header {
 .navbar .menu-hamburger {
     display: none;
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 20px;
+    right: 20px;
     width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.navbar .menu-hamburger:hover {
+    transform: scale(1.1);
+}
+
+.navbar .nav-links .close-menu {
+    display: none;
 }
 
 
@@ -145,51 +157,162 @@ header {
 }
 
 
-/* version mobile 
-@media screen and (max-width: 428px) {
+/* Menu burger responsive */
+@media screen and (max-width: 768px) {
     .navbar {
-        padding: 0;
+        padding: 10px;
     }
 
-    .navbar .logo{
-        position: absolute;
-        top: 50px;
-        left: 50px;
+    .navbar img[alt="logo"] {
+        width: 60px !important;
+        height: 60px !important;
     }
 
     .navbar .menu-hamburger {
         display: block;
+        top: 15px;
+        right: 15px;
     }
 
-    .nav-links {
+    .navbar .nav-links {
+        position: fixed;
         top: 0;
         left: 0;
-        position: absolute;
-        background-color: rgb(255, 255, 255, 0.20);
-        backdrop-filter: blur(8px);
+        background-color: rgba(86, 56, 19, 0.95);
+        backdrop-filter: blur(10px);
         width: 100%;
         height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: -100%;  par défaut le menu sera caché, en cliquant sur mobile menu, ça va s'ouvrir
+        margin-left: -100%;
         transition: all 0.5s ease;
+        z-index: 1000;
     }
 
-    .nav-links.mobile-menu {
-        margin-left: 0;
-   }
+    .navbar .nav-links .close-menu {
+        display: flex !important;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        line-height: 1;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        z-index: 1002;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
 
-    .nav-links ul {
+    .navbar .nav-links .close-menu:hover {
+        transform: rotate(90deg) scale(1.1);
+        color: rgb(165, 127, 103);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .navbar .nav-links.mobile-menu ~ .menu-hamburger {
+        display: none;
+    }
+
+    .navbar .nav-links ul {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 30px;
     }
 
     .navbar .nav-links ul li {
-        margin: 25px 0;
-        font-size: 1.2em;
+        margin: 0;
     }
 
+    .navbar .nav-links ul li a {
+        font-size: 24px;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links ul li a:hover {
+        color: rgb(165, 127, 103);
+    }
+
+    .accueil {
+        margin-left: 20px;
+        margin-right: 20px;
+        transform: translate(0, 200%);
+        margin-top: -600px;
+        padding: 20px;
+    }
+
+    .accueil h1 {
+        font-size: 30px;
+    }
+
+    .accueil ul {
+        flex-wrap: wrap;
+    }
+
+    .accueil ul li {
+        padding: 10px;
+    }
+
+    .contexte {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 15px;
+    }
+
+    .contexte p {
+        font-size: 16px;
+    }
 }
-*/
+
+@media screen and (max-width: 480px) {
+    .navbar .menu-hamburger {
+        width: 30px;
+        height: 30px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .navbar img[alt="logo"] {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .navbar .nav-links .close-menu {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 50px;
+    }
+
+    .navbar .nav-links ul li a {
+        font-size: 20px;
+    }
+
+    .accueil h1 {
+        font-size: 24px;
+    }
+
+    .accueil ul li img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .accueil ul li p {
+        font-size: 11px;
+    }
+}

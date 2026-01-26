@@ -19,6 +19,7 @@
       <img src="img/new-logo.png" alt="logo" style="width: 85px; height: 85px;">
       
       <div class="nav-links">
+        <span class="close-menu">&times;</span>
         <ul>
           <li><a href="#accueil">ACCUEIL</a></li>
           <li><a href="#jeu">LE JEU</a></li>
@@ -64,9 +65,34 @@
     <script>
       const menuHamburger = document.querySelector(".menu-hamburger")
       const navLinks = document.querySelector(".nav-links")
+      const navLinksItems = document.querySelectorAll(".nav-links a")
+      const closeMenu = document.querySelector(".close-menu")
 
       menuHamburger.addEventListener('click', ()=>{
         navLinks.classList.toggle('mobile-menu')
+      })
+
+      // Fermer le menu
+      if (closeMenu) {
+        closeMenu.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-menu')
+        })
+      }
+
+      // Fermer le menu quand on clique sur un lien
+      navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-menu')
+        })
+      })
+
+      // Fermer le menu quand on clique en dehors
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          if (!navLinks.contains(e.target) && !menuHamburger.contains(e.target)) {
+            navLinks.classList.remove('mobile-menu')
+          }
+        }
       })
     </script>
     <br id="jeu"><br>
