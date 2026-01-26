@@ -11,57 +11,57 @@
     <link rel="stylesheet" href="style/faq.css">
   </head>
   <body>
-    <video autoplay loop muted plays-inline class="video" id="accueil">
-        <source src="video/bg-vid.mp4" type="video/mp4">
-    </video>
-    
-    <nav class="navbar">
-      <img src="img/new-logo.png" alt="logo" style="width: 85px; height: 85px;">
+    <header id="accueil" class="hero">
+      <video autoplay loop muted playsinline class="video">
+          <source src="video/bg-vid.mp4" type="video/mp4">
+      </video>
       
-      <div class="nav-links">
-        <span class="close-menu">&times;</span>
-        <ul>
-          <li><a href="#accueil">ACCUEIL</a></li>
-          <li><a href="#jeu">LE JEU</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#mon-footer">CONTACTS</a></li>
-        </ul>
-      </div>
-      <img src="img/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
-    </nav>
-    
-    <div class="accueil">
-        <img src="img/new-logo.png" alt="logo" style="width: 130px; height: 130px;">
-        <h1>UN CHOC DE SAVEUR<span class="animation"></span></h1>
+      <nav class="navbar">
+        <img src="img/new-logo.png" alt="logo" style="width: 85px; height: 85px;">
         
-        <ul>
-            <li>
-                <img src="img/Flora.png" alt="Flora" style="width: 70px; height: 70px;">
-                <p>Flora-Larissa MERLO</p>
-                <p>Bachelor2 Ynov 3D</p>
-            </li>
-            <li>
-                <img src="img/Lucas.png" alt="Lucas" style="width: 70px; height: 70px;">
-                <p>Lucas BOUTEMY</p>
-                <p>Bachelor2 Ynov 3D</p>
-            </li>
-            <li>
-                <img src="img/Mathis.png" alt="Mathis" style="width: 70px; height: 70px;">
-                <p>Mathis FLESCH</p>
-                <p>Bachelor2 Ynov 3D</p>
-            </li>
-            <li>
-                <img src="img/Noella.png" alt="Noëlla" style="width: 70px; height: 70px;">
-                <p>Noëlla MAILHOL</p>
-                <p>Bachelor2 Ynov Informatique</p>
-            </li>
-        </ul>
+        <div class="nav-links">
+          <span class="close-menu">&times;</span>
+          <ul>
+            <li><a href="#accueil">ACCUEIL</a></li>
+            <li><a href="#jeu">LE JEU</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#mon-footer">CONTACTS</a></li>
+          </ul>
+        </div>
+        <img src="img/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+      
+      <div class="accueil">
+          <img src="img/new-logo.png" alt="logo" style="width: 130px; height: 130px;">
+          <h1>UN CHOC DE SAVEUR<span class="animation"></span></h1>
+          
+          <ul>
+              <li>
+                  <img src="img/Flora.png" alt="Flora" style="width: 70px; height: 70px;">
+                  <p>Flora-Larissa MERLO</p>
+                  <p>Bachelor2 Ynov 3D</p>
+              </li>
+              <li>
+                  <img src="img/Lucas.png" alt="Lucas" style="width: 70px; height: 70px;">
+                  <p>Lucas BOUTEMY</p>
+                  <p>Bachelor2 Ynov 3D</p>
+              </li>
+              <li>
+                  <img src="img/Mathis.png" alt="Mathis" style="width: 70px; height: 70px;">
+                  <p>Mathis FLESCH</p>
+                  <p>Bachelor2 Ynov 3D</p>
+              </li>
+              <li>
+                  <img src="img/Noella.png" alt="Noëlla" style="width: 70px; height: 70px;">
+                  <p>Noëlla MAILHOL</p>
+                  <p>Bachelor2 Ynov Informatique</p>
+              </li>
+          </ul>
 
-        <a href="#jeu">PLUS D'INFOS</a>
-    </div>
-    <header></header>
+          <a href="#jeu">PLUS D'INFOS</a>
+      </div>
+    </header>
 
-    <!--ouvrir le menu avec le menu hamburger par un click-->
     <script>
       const menuHamburger = document.querySelector(".menu-hamburger")
       const navLinks = document.querySelector(".nav-links")
