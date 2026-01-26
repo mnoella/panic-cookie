@@ -6,8 +6,7 @@
 /* Masquer les checkbox et les paragraphes */
 .faq-section input,
 .faq-section p{
-    display: none;;
-    flex-wrap: wrap;
+    display: none;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -37,7 +36,7 @@
     font-size: 1.2em;
     cursor: pointer;
     background: #f3f3efe7;
-    display: inline-block;
+    display: block;
     position: relative;
     padding: 7px 10px;
     font-weight: bold;
@@ -45,7 +44,11 @@
     border-left: 3px solid #342401e7;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
     transition: all .15s ease-out;
-    min-width: 800px;
+    width: min(800px, 100%);
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-right: 32px;
 }
 
 
@@ -71,7 +74,7 @@
 .faq-section label::before{
     content: '';
     position: absolute;
-    right: 4px;
+    right: 10px;
     top: 50%;
     margin-top: -6px;
     border: 6px solid transparent;
@@ -106,6 +109,36 @@ label {
 
 .faq-section input[type=checkbox] {
     vertical-align: middle;
+}
+
+
+@media screen and (max-width: 480px) {
+    .faq-section{
+        padding: 18px 12px;
+    }
+
+    .faq-section br{
+        display: none;
+    }
+
+    .faq-section label{
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        padding: 10px 36px 10px 12px;
+    }
+
+    .faq-section input[type=checkbox]:checked~p{
+        font-size: 1em;
+        margin: 10px 0 0 0;
+        max-width: 100%;
+    }
+
+    .faq-section p{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
 }
 
 
