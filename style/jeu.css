@@ -10,11 +10,37 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Espace entre sections */
+.section-spacer {
+  height: 80px;
+}
+
+.section-spacer--lg {
+  height: 110px;
+}
+
+.section-spacer--xl {
+  height: 140px;
+}
+
+@media (max-width: 480px) {
+  .section-spacer {
+    height: 60px;
+  }
+  .section-spacer--lg {
+    height: 85px;
+  }
+  .section-spacer--xl {
+    height: 105px;
+  }
+}
+
 .flip-card-container {
     display: flex;
-    flex-wrap: wrap;/* Passer a la ligne en fonction de la taille de l'écran*/ 
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    column-gap: 50px;
+    row-gap: 90px;
     
 }
 
@@ -26,6 +52,10 @@ body {
     margin-right: 10px;
     margin-left: 10px;
     padding-bottom: 150px;
+}
+
+.flip-card, .evenement, .quete {
+  flex: 0 0 auto;
 }
 
 
@@ -87,6 +117,17 @@ body {
   perspective: 500px; 
   align-items: center;
   flex-wrap: wrap;
+}
+
+.equipement-card {
+  width: 180px;
+  height: 260px;
+  padding-bottom: 70px; 
+}
+
+.equipement-card .description {
+  padding: 0;
+  margin-top: 20px;
 }
 
 .jeton-cookie, .jeton-pancake, .jeton-de-vie, .ressource {
@@ -186,10 +227,3 @@ body {
     font-size: 12px;
   }
 
-
-  @media only screen and (max-width: 428px) {
-    .flip-card, .evenement, .quete {
-        width: 80px;
-        height: 60px;
-    }
-}
